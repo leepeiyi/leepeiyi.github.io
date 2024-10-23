@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link to the Navbar Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="mystyle.css">
+
+    <!-- Link to the Animate.css library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        /* Add horizontal lines */
+        .project-section {
+            padding: 20px 0;
+        }
+
+        /* Hide project information initially */
+        .project-info {
+            background-color: #F0EBE3;
+            /* Background color */
+            border-radius: 10px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Padding around content */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* Box shadow for depth */
+        }
+
+        .project-info h2 {
+            font-family: 'Poppins', sans-serif;
+            /* Font family */
+            font-weight: bold;
+            /* Bold font weight */
+            color: #2C3E50;
+            /* Text color */
+            margin-top: 0;
+            /* Remove top margin */
+        }
+
+        .project-info p {
+            font-family: 'Poppins', sans-serif;
+            /* Font family */
+            color: #34495E;
+            /* Text color */
+            line-height: 1.6;
+            /* Line height for readability */
+        }
+
+        /* Show project information when scrolled into view */
+        .project-info.animated {
+            opacity: 1;
+        }
+
+        /* Style for project posts */
+        .project-post {
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: #948979;
+            margin-bottom: 10px;
+            /* Add margin bottom */
+        }
+
+        .text-center {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Include the navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Your new page content goes here -->
+    <section class="project-section" id="web-page">
+        <div class="container">
+            <h2 class="text-center"><img width="50" height="50" src="https://img.icons8.com/ios/50/webpage.png" alt="webpage" /> Web Page <img width="50" height="50" src="https://img.icons8.com/ios/50/webpage.png" alt="webpage" /></h2>
+            <div class="project-post row">
+                <!-- Left column for video -->
+                <div class="col-md-6">
+                    <video controls class="img-fluid">
+                        <source src="assets/IMG_7361.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Right column for project information -->
+                <div class="col-md-6 project-info">
+                    <h2>Medimate</h2>
+                    <p><strong>About:</strong> Utilizing HTML, CSS, Bootstrap, and JavaScript, this project crafts a user-friendly medical page enabling appointment booking and payment processing for streamlined patient visits.</p>
+                    <p><strong>My Contribution:</strong> I was responsible for implementing the calendar feature, allowing users to seamlessly integrate their appointments into their personal calendars. Additionally, I developed the health dashboard, empowering users to review past health records and plan future checkups accordingly.</p>
+                </div>
+            </div>
+
+            <div class="project-post row">
+                <!-- Left column for video -->
+                <div class="col-md-6">
+                    <video controls class="img-fluid">
+                        <source src="assets/IMG_0705.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Right column for project information -->
+                <div class="col-md-6 project-info">
+                    <h2>Parkify</h2>
+                    <p><strong>About:</strong> Streamlining your parking experience with our project, simplifying your decision-making process by instantly providing the top 10 nearest parking options along with rates. Powered by microservices and deployed with Docker for seamless accessibility</p>
+                    <p><strong>My Contribution:</strong> I utilized the Google Geocode API to obtain the geocode of the user's specified destination. Using a distance formula, I determined the ten nearest carparks to the user's IP address. With the geocode and calculated distances, I then correlated these carparks with available data from the URA API. Finally, I helped to display the top ten carparks on a map </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section" id="business-flow">
+        <div class="container">
+            <h2 class="text-center"><img width="50" height="50" src="https://img.icons8.com/ios/50/serial-tasks--v1.png" alt="serial-tasks--v1" /> Business Flow <img width="50" height="50" src="https://img.icons8.com/ios/50/serial-tasks--v1.png" alt="serial-tasks--v1" /></h2>
+            <div class="project-post row">
+                <!-- Left column for pdf -->
+                <div class="col-md-6">
+                    <a href="assets/Accor Hotel.pdf" download>
+                        <img src="assets/accorhotel.png" class="img-fluid" style="width: 100%; height: auto;">
+                    </a>
+                </div>
+                <!-- Right column for project information -->
+                <div class="col-md-6 project-info">
+                    <h2>Accor Hotel</h2>
+                    <p><strong>About:</strong> Our project centers on the comprehensive analysis of Accor Hotel's business operations, including examination of its competitors and market dynamics. Our primary focus is on enhancing the customer journey by refining pre-arrival experiences, thereby optimizing business processes and elevating overall customer satisfaction levels.</p>
+                </div>
+            </div>
+            <div class="project-post row">
+                <!-- Left column for pdf -->
+                <div class="col-md-6">
+                    <a href="assets/BPAS.pdf" download>
+                        <img src="assets/to-be.png" class="img-fluid" style="width: 100%; height: auto;">
+                    </a>
+                </div>
+                <!-- Right column for project information -->
+                <div class="col-md-6 project-info">
+                    <h2>Hotel Business (Hotel 82)</h2>
+                    <p><strong>About:</strong> Our project entails selecting an existing real-world business process and conducting a comprehensive analysis using both as-is and to-be workflow diagrams. Through this analysis, we aim to identify bottlenecks and perform cost and time analyses using tools like Signavio. Leveraging recent trending IT solutions, we seek to propose innovative strategies to address the identified bottlenecks and assess the potential benefits for the business upon implementation of these solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section" id="prototypes">
+        <div class="container">
+            <h2 class="text-center"><img width="50" height="50" src="https://img.icons8.com/ios/50/prototype.png" alt="prototype" /> Prototypes <img width="50" height="50" src="https://img.icons8.com/ios/50/prototype.png" alt="prototype" /></h2>
+            <div class="project-post row">
+                <!-- Left column for video -->
+                <div class="col-md-6">
+                    <video controls class="img-fluid">
+                        <source src="assets/pharmalicious.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Right column for project information -->
+                <div class="col-md-6 project-info">
+                    <h2>Pharmalicious</h2>
+                    <p><strong>About:</strong> This app is designed specifically to assist users in remembering to take their medication, particularly in households with elderly members who may forget. It enables family members to remind each other about medication schedules and also serves as a platform for monitoring medication stock levels at home, preventing over-purchasing.
+                        Through this project, I gained valuable insights into the prototyping process, learning various heuristics and techniques to design user-friendly prototypes.
+
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="project-post row">
+                <!-- Left column for video -->
+                <div class="col-md-6">
+                    <video controls class="img-fluid">
+                        <source src="assets/IMG_7320.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Right column for project information -->
+                <div class="col-md-6 project-info">
+                    <h2>NVPC</h2>
+                    <p><strong>About:</strong> For this project, we collaborated with NVPC (National Volunteer & Philanthropy Centre) as our real client. Our main objective was to devise a solution to incentivize startups to engage in volunteering, particularly in their early stages when resources are limited. We proposed enhancing their existing but underutilized application to serve as a platform for communication among different participant groups, facilitating project discussions and interactions. Our solution involved enabling startups to form groups and initiate activities where they could share existing resources. We developed a prototype demonstrating how startups could connect, identify common interests, and collaborate on volunteering initiatives.
+
+
+
+                    </p>
+                </div>
+            </div>
+            <div class="project-post row">
+                <!-- Left column for video -->
+                <div class="col-md-6">
+                    <video controls class="img-fluid">
+                        <source src="assets/IMG_0675.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!-- Right column for project information -->
+                <div class="col-md-6 project-info">
+                    <h2>Anytime Fitness</h2>
+                    <p><strong>About:</strong> For this project, our focus was on selecting an existing company and evaluating the necessity for digital transformation, along with proposing strategies to facilitate this transformation. During our analysis, a significant issue emerged when a gym member was falsely accused of tailgating, sparking controversy. To address this, we proposed integrating IoT sensors at the entrance and within the app to notify users of tailgating incidents, enabling staff to resolve such issues immediately. Additionally, we explored solutions to enhance the overall customer experience, including IoT sensors on equipment for better tracking and member satisfaction, as well as offering virtual coaching via the app for convenient workouts anytime, anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section" id="data-analytics">
+        <div class="container">
+            <h2 class="text-center"><img width="50" height="50" src="https://img.icons8.com/windows/32/marketing.png" alt="marketing" /> Data Analytics <img width="50" height="50" src="https://img.icons8.com/windows/32/marketing.png" alt="marketing" /></h2>
+            <div class="project-post row">
+                <!-- Left column for pdf -->
+                <div class="col-md-6">
+                    <a href="assets/COR1305 - Group 2 Report - G1.pdf" download>
+                        <img src="assets/spreadsheet.png" class="img-fluid" style="width: 100%; height: auto;">
+                    </a>
+                </div>
+                <!-- Right column for project information -->
+                <div class="col-md-6 project-info">
+                    <h2>AirBnB</h2>
+                    <p><strong>About:</strong> In this project, we conducted an investment analysis focusing on Airbnb rentals to determine the timeframe for investors to achieve profitability. Utilizing online data, including property values across various regions in Singapore and rental rates in those areas, we calculated optimal rental rates for investors and projected the year when they could expect to recoup their initial investment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <hr>
+
+    <!-- Include the footer -->
+    <div id="footer-container"></div>
+
+
+</body>
+<script>
+     fetch('navbar.html')
+         .then(response => response.text())
+         .then(html => {
+           document.getElementById('navbar-container').innerHTML = html;
+         });
+
+       // Fetch footer.html
+       fetch('footer.html')
+         .then(response => response.text())
+         .then(html => {
+           document.getElementById('footer-container').innerHTML = html;
+         });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+</html>

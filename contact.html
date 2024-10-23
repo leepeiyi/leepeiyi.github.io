@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link to the Navbar Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="mystyle.css">
+
+    <!-- Link to the Animate.css library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        /* Styles for form container */
+        .form-container {
+            background-color: #948979;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Custom styles for input and textarea */
+        .form-container .form-control {
+            background-color: #b0a594; /* Slightly lighter shade for readability */
+            color: #fff; /* Text color */
+            border: 1px solid #948979; /* Border color */
+        }
+
+        .form-container .form-control::placeholder {
+            color: #e1dbd4; /* Placeholder text color */
+        }
+
+        .form-container .form-control:focus {
+            background-color: #b0a594;
+            color: #fff;
+            border: 1px solid #7b6d61; /* Darker border on focus */
+            box-shadow: none; /* Remove default box-shadow on focus */
+        }
+
+        .form-container .btn-send {
+            margin-top: 20px; /* Ensure some spacing */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Include the navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Your new page content goes here -->
+    <section id="email">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xl-8 offset-xl-2 py-5">
+                    <div class="form-container">
+                        <!-- We're going to place the form here in the next step -->
+                        <form id="contact-form" onsubmit="sendEmail(); reset(); return false;">
+
+                            <div class="messages"></div>
+
+                            <div class="controls">
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="form_name">Name</label>
+                                            <input id="form_name" type="text" name="name" class="form-control"  required="required" data-error="Name is required.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="form_email">Email</label>
+                                            <input id="form_email" type="email" name="email" class="form-control"  required="required" data-error="Valid email is required.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number</label>
+                                            <input id="phone" type="number" name="phone" class="form-control"  required="required" data-error="Valid phone number is required.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="form_message">Message</label>
+                                            <textarea id="form_message" name="message" class="form-control"  rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <input type="submit" class="btn btn-dark btn-send" value="Send message">
+                                    </div>
+                                    
+                                </div>
+
+                                
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Include the footer -->
+    <div id="footer-container"></div>
+
+</body>
+<script>
+    function sendEmail() {
+        Email.send({
+            SecureToken: "21681fa3-b1b6-4199-b52d-a1c6146b470f ",
+            To: 'ppeiyijoleen@gmail.com',
+            From: "ppeiyijoleen@gmail.com",
+            Subject: "New Contact Form Enquiry",
+            Body: "Name: " + document.getElementById("form_name").value + "<br> Email: " + document.getElementById("form_email").value +
+                "<br> Phone No: " + document.getElementById("phone").value + "<br> Message: " + document.getElementById("form_message").value
+        }).then(
+            message => alert(message)
+        );
+    }
+    fetch('navbar.html')
+         .then(response => response.text())
+         .then(html => {
+           document.getElementById('navbar-container').innerHTML = html;
+         });
+
+       // Fetch footer.html
+       fetch('footer.html')
+         .then(response => response.text())
+         .then(html => {
+           document.getElementById('footer-container').innerHTML = html;
+         });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</html>

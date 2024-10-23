@@ -1,0 +1,363 @@
+/* Update body styles */
+body {
+    background-color: #DFD0B8;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #DFD0B8;
+    /* Ensure the navbar is above other content */
+}
+
+.section-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 42px;
+}
+
+/* Update about section styles */
+.about-section {
+    color: #f2f2f2;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    /* Use flexbox for easier alignment */
+    align-items: center;
+    /* Center vertically */
+}
+
+.hello-txt {
+    line-height: 1.3;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.intro-text {
+    font-size: 42px;
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+}
+
+.typed-text {
+    color: white;
+    font-size: 42px;
+}
+
+.fixed-text {
+    color: black;
+    font-size: 42px;
+}
+
+.about-left {
+    flex: 1;
+    position: relative;
+    color: #3C5B6F;
+    font-family: "Merriweather", serif;
+}
+
+.about-left p {
+    position: relative;
+    font-size: 20px;
+}
+
+.about-right {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.about-right img {
+    max-width: 100%;
+    height: auto;
+    /* Limit the height of the image */
+}
+
+.door-image-container {
+    position: relative;
+    width: 200px;
+    /* Adjust width as needed */
+    height: 400px;
+    /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.door-image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    clip-path: polygon(50% 0%, 100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+/* Projects CSS */
+#projects-section {
+    background-color: #3C5B6F;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* Make the card fill its container */
+    height: 100%;
+    /* Make the card fill its container */
+    border: none;
+}
+
+.card-img-top {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    border-color: #3C5B6F !important;
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+#skills {
+    background-color: #948979;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    min-height: 50vh;
+}
+
+.skills .container {
+    background: rgba(0, 0, 22, 0.4);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.skills .container .row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+
+.skills .container .bar {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 22, 0.9);
+    transition: 0.2s;
+}
+
+.skills .container .bar:hover {
+    box-shadow: 0 8px 10px #153448 !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.skills .container .bar .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skills .container .bar .info i {
+    font-size: 4rem;
+}
+
+.skills .container .bar .info span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    font-family: "Merriweather", serif;
+}
+
+/* Skills media queries starts */
+@media screen and (max-width: 600px) {
+    .skills .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .skills .container .row {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem;
+        padding: 2rem 0.2rem 2rem 0.2rem;
+        gap: 1rem;
+    }
+
+    .skills .container {
+        margin-top: 5px;
+        width: 100%;
+    }
+}
+
+/* Skills media queries ends */
+/* Skills section ends */
+
+/* Footer section starts */
+.footer {
+    padding-top: 0;
+    background: #153448;
+}
+
+.footer .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    /* Adjust padding to reduce height */
+}
+
+.footer .box-container .box {
+    flex: 1 1 20rem;
+    /* Adjust width to be smaller */
+    margin: 1.5rem;
+    /* Adjust margin to reduce spacing */
+}
+
+.footer .box-container .box h3 {
+    font-size: 1.8rem;
+    /* Smaller font size */
+    color: #fff;
+    padding-bottom: 0.5rem;
+    /* Adjust padding to reduce height */
+    font-weight: normal;
+}
+
+.footer .box-container .box p {
+    font-size: 1.2rem;
+    /* Smaller font size */
+    color: #ccc;
+    padding: 0.5rem 0;
+    /* Adjust padding to reduce height */
+    text-transform: none;
+}
+
+.footer .box-container .box p i {
+    padding-right: 0.8rem;
+    /* Adjust padding */
+    color: #ffae00;
+}
+
+.footer .box-container .box a {
+    font-size: 1.2rem;
+    /* Smaller font size */
+    color: rgb(238, 238, 238);
+    padding: 0.2rem 0;
+    /* Adjust padding to reduce height */
+    display: block;
+}
+
+.footer .box-container .box a:hover {
+    color: #ffae00;
+}
+
+.footer .box-container .box .share {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;
+    /* Adjust padding to reduce height */
+}
+
+.footer .box-container .box .share a {
+    height: 2.5rem;
+    /* Smaller size */
+    width: 2.5rem;
+    /* Smaller size */
+    padding: 0.5rem;
+    /* Adjust padding */
+    text-align: center;
+    border-radius: 2.5rem;
+    /* Adjust to match new size */
+    font-size: 1.2rem;
+    /* Smaller font size */
+    margin-right: 0.5rem;
+    /* Adjust margin */
+    transition: 0.2s;
+    background: rgb(230, 230, 230);
+    color: #02094b;
+    border: none;
+}
+
+.footer .box-container .box .share a:hover {
+    background: transparent;
+    transform: scale(0.98);
+    border: 0.1rem solid rgb(180, 178, 178);
+    color: #ffae00;
+}
+
+.footer .credit {
+    padding: 0.5rem 0;
+    /* Adjust padding to reduce height */
+    text-align: center;
+    font-size: 1.2rem;
+    /* Smaller font size */
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    border-top: 0.1rem solid #fff3;
+}
+
+.footer .credit a {
+    color: #ffae00;
+}
+
+.footer .fa {
+    color: #e90606;
+    margin: 0 0.3rem;
+    font-size: 1.2rem;
+    /* Smaller font size */
+    animation: pound 0.35s infinite alternate;
+}
+
+@-webkit-keyframes pound {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes pound {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 450px) {
+    .footer .box-container .box {
+        margin: 1.5rem;
+    }
+
+    .footer .box-container .box p {
+        padding: 0.7rem;
+    }
+
+    .footer .box-container .box .share a {
+        padding: 1.2rem;
+    }
+}
+
+/* Footer section ends */
